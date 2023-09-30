@@ -2,6 +2,7 @@
   "devDependencies": {
     "cypress": "^13.2.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-localstorage-commands": "^2.2.4",
     "cypress-xpath": "^2.0.1"
   }
 }
