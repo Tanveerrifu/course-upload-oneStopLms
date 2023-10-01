@@ -48,7 +48,7 @@ Cypress.Commands.add("login", (email, password) => {
 
     cy.clearLocalStorage();
     cy.wait(1000)
-    cy.visit("https://adminqa.onestoplms.com/");
+    cy.visit("/");
     cy.get("#email").type(email);
     cy.get("#pass").type(password, { sensitive: true });
     cy.get(":nth-child(1) > .btn").click();

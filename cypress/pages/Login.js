@@ -1,6 +1,6 @@
 class LoginPage {
   userlogin(email, password) {
-    cy.visit("https://adminqa.onestoplms.com/");
+    cy.visit("/");
     // Check if the user is already on the dashboard page
     cy.url().then((url) => {
       if (url.includes("/dashboard")) {
