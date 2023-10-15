@@ -54,6 +54,10 @@ Cypress.Commands.add("login", (email, password) => {
   cy.get(":nth-child(1) > .btn").click();
   cy.wait(1000);
 });
+Cypress.Commands.add('clearSession', () => {
+  cy.clearCookies(); // You can also use cy.clearLocalStorage() to clear local storage
+});
+
 
 Cypress.Commands.add("logout", () => {
   const accessToken = JSON.parse(

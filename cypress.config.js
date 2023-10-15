@@ -7,9 +7,9 @@ module.exports = defineConfig({
       require("cypress-localstorage-commands/plugin")(on, config);
       return config;
     },
-    baseUrl: 'https://adminqa.onestoplms.com',
+    baseUrl: "https://adminqa.onestoplms.com",
     testIsolation: false,
-    viewportWidth: 1366, // Set your desired width
-    viewportHeight: 768, // Set your desired height
+    viewportWidth: 1000,
+    viewportHeight: 660,
   },
 });
