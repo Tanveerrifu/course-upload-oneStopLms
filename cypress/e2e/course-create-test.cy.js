@@ -113,6 +113,7 @@ describe("Create new course", () => {
     cy.get('select[name="skill_level"]').select("intermediate");
   });
     it("User can input course price", () => {
+      cy.wait(10000);
       cy.get('input[name="price"]').clear().type('1000');
 
     });
@@ -123,5 +124,10 @@ describe("Create new course", () => {
     it("User can input discounted course price", () => {
       cy.get('input[name="discounted_price"]').clear().type('200');
 
+    });
+    after(() => {
+      // cy.logout();
+      cy.clearLocalStorage();
+      // cy.removeLocalStorage("myData");
     });
 });

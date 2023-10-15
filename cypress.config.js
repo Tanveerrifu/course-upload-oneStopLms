@@ -8,7 +8,7 @@ module.exports = defineConfig({
       return config;
     },
     baseUrl: 'https://adminqa.onestoplms.com',
-    testIsolation: true,
+    testIsolation: false,
     viewportWidth: 1366, // Set your desired width
     viewportHeight: 768, // Set your desired height
   },

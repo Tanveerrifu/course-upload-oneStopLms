@@ -46,20 +46,21 @@ Cypress.Commands.add("login", (email, password) => {
   //   window.localStorage.setItem("myData", JSON.stringify(resp.body.data));
   // });
 
-    cy.clearLocalStorage();
-    cy.wait(1000)
-    cy.visit("/");
-    cy.get("#email").type(email);
-    cy.get("#pass").type(password, { sensitive: true });
-    cy.get(":nth-child(1) > .btn").click();
-    cy.wait(1000)
-    
+  cy.clearLocalStorage();
+  cy.wait(1000);
+  cy.visit("/");
+  cy.get("#email").type(email);
+  cy.get("#pass").type(password, { sensitive: true });
+  cy.get(":nth-child(1) > .btn").click();
+  cy.wait(1000);
 });
 
 Cypress.Commands.add("logout", () => {
-    const accessToken = JSON.parse(
+  const accessToken = JSON.parse(
     window.localStorage.getItem("myData")
   ).accessToken;
+
+  cy.wait(2000);
 
   cy.request({
     method: "POST",
