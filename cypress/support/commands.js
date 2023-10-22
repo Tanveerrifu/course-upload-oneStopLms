@@ -28,6 +28,7 @@
 import "cypress-file-upload";
 import "cypress-xpath";
 
+
 // Optionally, you can add the following code to enable the XPath aliases (// and ..) globally:
 Cypress.Commands.add("enableXpath", () => {
   Cypress.config("xpath", "true");
